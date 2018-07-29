@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Can't escape from Crossing Fate</title>
+</head>
+<body>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Title: {{this.title}}</div>
+                <div>Link: {{this.content}}</div>
+                <div>Channel:{{this.channel}} </div>
+            </article>
+        {{/each}}
+    </div>
+
+</body>
+</html>

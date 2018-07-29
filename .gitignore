@@ -1,0 +1,14 @@
+node_modules
+build
+data/
+logs
+**/public/images
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+results

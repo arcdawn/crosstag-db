@@ -1,0 +1,77 @@
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    background-color: aliceblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: darkgray;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.sidesearch{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right:0;
+    background-color: aliceblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidesearch a{
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidesearch a:hover{
+    color: darkgray;
+}
+
+.sidesearch .closebtn{
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.item{
+    display: block;
+    text-align: center;
+}
+
+#page-name{
+    padding-left: 1em;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
