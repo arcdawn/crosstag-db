@@ -7,17 +7,28 @@
     left:0;
     background-color: aliceblue;
     overflow-x: hidden;
+    padding-top: 20px;
     transition: 0.5s;
 }
 
 .sidenav a{
     padding: 8px 8px 8px 32px;
     font-size: 20px;
+    text-decoration: none;
     color: black;
     display: block;
     transition: 0.3s;
+    overflow-x: hidden;
 }
-
+.sidenav h2{
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    overflow-x: hidden;
+}
 .sidenav a:hover{
     color: darkgray;
 }
@@ -29,6 +40,10 @@
     font-size: 30px;
     margin-left: 20px;
 }
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 .sidesearch{
     height: 100%;
     width: 0;
@@ -66,22 +81,66 @@
 }
 .entry{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
+    
 }
-.title{
+.titleformat{
     display: inline-block;
     text-align: left;
+    background-color: beige;
     width:950px;
     flex-wrap: wrap;
+}
+.title{
+    padding-left: 6px;
 }
 .item{
     display: inline-flex;
     text-align: left;
     margin: auto;
+    background-color: beige;
     width: 950px;
 }
 .details{
-
+    margin-left: 6px;
+}
+#search{
+    margin-left: auto;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+}
+#search:hover{
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+#searchform{
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+}
+#resetbutton{
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+}
+#searchform:hover{
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+#resetbutton:hover{
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+#navmenu{
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+}
+#navmenu:hover{
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+#aboutme{
+    margin: 20px 20px 20px 80px;
 }
 .players{
 
@@ -92,6 +151,8 @@
     display: inline-flex;
     justify-content: flex-end;
     margin-left: auto;
+    margin-right: 6px;
+    margin-top: -15px;
     height: 50px;
     width: 50px;
 }
@@ -104,4 +165,3 @@
     transition: margin-left .5s;
     padding: 20px;
 }
-

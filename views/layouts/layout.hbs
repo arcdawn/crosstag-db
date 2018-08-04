@@ -22,38 +22,64 @@
             <div id="searchNav" class="sidesearch">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
                     <h2>Search</h2>
-                    <form action="/get-data" method="get">
+                    <form action="/get-data" method="get" id="searchform-form">
                         <div id="player-1">
                             <p>player 1</p>
-                            <input type="input" name="id">
+                            <input type="input" name="playerone">
+                            <select name="charoneone" id="">
+                                    <option value="" selected="selected"></option>
+                                {{# each characters}}
+                                    <option value="{{this.name}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                            <select name="charonetwo" id="">
+                                <option value="" selected="selected"></option>
+                                {{# each characters}}
+                                    <option value="{{this.name}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
                         </div>
                         <div id="player-2">
                             <p>player 2</p>
+                            <input type="input" name="playertwo">
+                            <select name="chartwoone" id="">
+                                <option value="" selected="selected"></option>
+                                {{# each characters}}
+                                    <option value="{{this.name}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                            <select name="chartwotwo" id="">
+                                <option value="" selected="selected"></option>
+                                {{# each characters}}
+                                    <option value="{{this.name}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
                         </div>
                         <div id="channel">
                             <p>channel</p>
                             <input type="input" name="channel">
                         </div>
                         <div id="version">
-                            <p>version</p>
+                            
                         </div>
                         <div id="title">
                             <p>title</p>
                             <input type="input" name="title">
                         </div>
-                        <button type="submit"><img src="./images/search.svg" alt="" width="20" height="20"></button>
-                        <button><img src="./images/reset.png" alt="" width="20" height="20"></button>
+                        <input type="image" src="./images/search.svg" alt="Submit form" width="50" height="50" id="searchform"></button>
+                        <div><img src="/images/reset.png" alt="" width="50" height="50" id="resetbutton" onclick="searchReset()"></div>
                     </form>
             </div>
             <div class="main">
                     <nav class="navbar navbar-expand bg-light">
-                        <span onclick="openNav()"><img src="./images/menu.svg" alt="" width="30" height="30"></span>
+                        <span onclick="openNav()" id="navmenu"><img src="./images/menu.svg" alt="" width="30" height="30"></span>
                         <a href="/" class="navbar-brand text-dark" id="page-name">Can't Escape From Crossing Fate</a>
                         <div></div>
-                        <span onclick="openSearch()" id="search" class="justify-content-end navbar-collapse collapse"><img src="./images/search.svg" alt="" width="30" height="30"></span>
+                        <span onclick="openSearch()" id="search" class="justify-content-end" width="30" height="30px"><img src="./images/search.svg" alt="" width="30" height="30"></span>
                     </nav>
             </div>
     {{{ body }}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/javascripts/main.js"></script>
 </body>
 </html>

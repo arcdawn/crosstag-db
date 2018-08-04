@@ -10,7 +10,10 @@
     <div>
         {{# each items }}
             <div class="entry">
-            <div class="title">Title: {{this.title}}</div>
+            <div class="titleformat">
+                <div class="title">Title: {{this.title}}</div>
+            </div>
+            
             <br>
             <div class="item">
                 <div class="details">
@@ -23,7 +26,7 @@
                     <span>{{this.ptwo}}: {{this.ponecharone}}/{{ponechartwo}}</span>
                 </div>
                 <div class="actions">
-                    <a href="{{this.content}}"><img src="/images/chi.jpg" alt="" width="50" height="50"></a>
+                    <a href="{{this.content}}" target="_blank"><img src="/images/chi.jpg" alt="" width="50" height="50"></a>
                 </div>
             </div>
             </div>

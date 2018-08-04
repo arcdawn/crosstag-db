@@ -14,3 +14,7 @@ function closeSearch(){
     document.getElementById("searchNav").style.width = "0px";
     document.body.style.backgroundColor = "rgba(0,0,50,0)";
 }
+function searchReset(){
+    var form = document.getElementById("searchform-form");
+    form.reset();
+}

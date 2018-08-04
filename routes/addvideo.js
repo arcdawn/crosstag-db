@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 			characterArray.push(doc);
 		}, function(){
 			db.close();
-			res.render('addvideo', {characters: characterArray});
+			res.render('addvideo', {title: "Can't escape from Crossing Fate", characters: characterArray});
 		});
 	});
   //res.render('addvideo', { title: 'Express' });
