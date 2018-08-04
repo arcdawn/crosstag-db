@@ -1,4 +1,5 @@
 var express = require('express');
+var sanitize = require('google-caja-sanitizer').sanitize;
 var router = express.Router();
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
@@ -24,8 +25,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/get-data', function(req, res, next){
 	var resultArray = [];
-	var title = new RegExp(req.query.title, 'i');
-	var channel = new RegExp(req.query.channel, 'i');
+	var title = sanitize(req.query.title);
+	title = new RegExp(title, 'i');
+	var channel = new RegExp(sanitize(req.query.channel), 'i');
 	console.log(title);
 	mongo.connect(url, function(err, db){
 		assert.equal(null, err);
@@ -44,7 +46,14 @@ router.post('/insert', function(req, res, next){
 	var item = {
 		title: req.body.title,
 		content: req.body.link,
-		channel: req.body.channel
+		channel: req.body.channel,
+		pone: req.body.pone,
+		ptwo: req.body.ptwo,
+		ponecharone: req.body.charoneone,
+		ponechartwo: req.body.charonetwo,
+		ptwocharone: req.body.chartwoone,
+		ptwochartwo: req.body.chartwotwo,
+		date: req.body.date
 	};
 	mongo.connect(url, function(err, db){
 		assert.equal(null, err);

@@ -9,11 +9,26 @@
 <body>
     <div>
         {{# each items }}
-            <article class="item">
-                <div>Title: {{this.title}}</div>
-                <div>Link: {{this.content}}</div>
-                <div>Channel:{{this.channel}} </div>
-            </article>
+            <div class="entry">
+            <div class="title">Title: {{this.title}}</div>
+            <br>
+            <div class="item">
+                <div class="details">
+                    <div>Date: {{this.date}}</div>
+                    <div>Channel: {{this.channel}} </div>
+                </div>
+                <div class="players">
+                    <span>{{this.pone}}: {{this.ponecharone}}/{{ponechartwo}}</span>
+                    <span> vs </span>
+                    <span>{{this.ptwo}}: {{this.ponecharone}}/{{ponechartwo}}</span>
+                </div>
+                <div class="actions">
+                    <a href="{{this.content}}"><img src="/images/chi.jpg" alt="" width="50" height="50"></a>
+                </div>
+            </div>
+            </div>
+            
+            
         {{/each}}
     </div>
 

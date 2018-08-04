@@ -7,24 +7,48 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/insert" method="post">
+    <form action="/insert" method="post" class="vods">
     <p>Title</p>
     <input type="text" name="title" id="">
     <br>
     <p>Link</p>
     <input type="text" name="link" id="">
     <br>
-    <p>Team 1 Characters</p>
-    <input type="text" name="channel" id="">
+    <p>Player 1</p>
+    <input type="text" name="pone" id="">
     <br>
-    <p>Team 2 Characters</p>
-    <input type="text" name="channel" id="">
+    <p>Player 1 Team</p>
+    <select name="charoneone" id="">
+        {{# each characters}}
+            <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <select name="charonetwo" id="">
+        {{# each characters}}
+            <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <br>
+    <p>Player 2</p>
+    <input type="text" name="ptwo" id="">
+    <br>
+    <p>Player 2 Team</p>
+    <select name="chartwoone" id="">
+        {{# each characters}}
+            <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <select name="chartwotwo" id="">
+        {{# each characters}}
+            <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
     <br>
     <p>Channel</p>
     <input type="text" name="channel" id="">
     <br>
     <p>Date</p>
-    <input type="text" name="channel" id="">
+    <input type="date" name="date" id="">
     <button type="submit">Add Entry</button>
     </form>
 </body>

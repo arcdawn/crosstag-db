@@ -60,10 +60,40 @@
     font-size: 30px;
     margin-left: 20px;
 }
-
-.item{
-    display: block;
+.vods{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.entry{
     text-align: center;
+    margin-top: 10px;
+}
+.title{
+    display: inline-block;
+    text-align: left;
+    width:950px;
+    flex-wrap: wrap;
+}
+.item{
+    display: inline-flex;
+    text-align: left;
+    margin: auto;
+    width: 950px;
+}
+.details{
+
+}
+.players{
+
+    margin-left: 200px;
+
+}
+.actions{
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
 }
 
 #page-name{
